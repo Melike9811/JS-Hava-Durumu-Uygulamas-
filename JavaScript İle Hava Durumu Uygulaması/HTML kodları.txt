@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hava Durumu Uygulaması</title>
+<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/screen.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div class="container">
+<div id="heading">
+<h1 class="text-center">Hava Durumu</h1>
+</div>
+     
+<div class="row">
+<div class="col-md-6 col-xs-8 col-xs-push-2 col-md-push-3">
+<div class="weather text-center">
+<h2 class="temp"></h2>
+<h3> <span class="city"></span>, <span class="country"></span></h3>
+<div class="iconpic">
+<img src="" class='img img-responsive center-block'>
+</div>
+<h4 class="weatherDetail"></h4><br/>
+<div class="toggle" id="c">
+<button type="button" class="btn btn-danger btn-lg">Sıcaklık Birimini Değiştir</button>
+
+</div>
+    <input type="button" id="renk" class="btn btn-danger btn-lg"  value="Arka Plan Rengini Değiştir">
+</div><!--weather-->
+</div>
+    
+</div><!--row-->
+    
+<br/>
+    
+</div>
+<script src="hava.js"></script>
+    
+    
+ 
+ 
+<script>
+var dizi=["#D24D57","#e74c3c","#f1c40f","#2c3e50","#8e44ad","#bdc3c7","#1abc9c","#3498db","#95a5a6"];
+var renk=document.getElementById("renk");
+ 
+ 
+renk.onclick=function(){
+ 
+var rasgele=Math.floor(Math.random()*dizi.length);
+ 
+document.body.style.backgroundColor=dizi[rasgele];
+ 
+}
+ 
+ 
+</script>
+</body>
+    
+</html>
+
+
+
+
+
